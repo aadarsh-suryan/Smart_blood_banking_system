@@ -1,0 +1,38 @@
+.legal-page {
+  @import url('./theme.css');
+  padding: 40px 20px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.legal-card {
+  background: #fff;
+  max-width: 1114px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  color: #333;
+}
+
+.legal-card h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #e74c3c; /* Accent color (warm tone for DonorDirect) */
+}
+
+.legal-card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.legal-card section {
+  margin-top: 30px;
+}
+
+.legal-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}

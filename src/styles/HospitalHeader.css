@@ -1,0 +1,20 @@
+.hospital-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e74c3c;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hospital-header button {
+  background: white;
+  color: #e74c3c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

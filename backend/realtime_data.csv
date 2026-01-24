@@ -1,0 +1,11 @@
+type,blood_type,units,city,date,urgency,weather
+donation,O+,1,Delhi,2024-01-15,normal,sunny
+request,A+,2,Mumbai,2024-01-15,high,rainy
+donation,B+,1,Bangalore,2024-01-16,normal,cloudy
+request,AB+,1,Chennai,2024-01-16,critical,sunny
+donation,O-,1,Kolkata,2024-01-17,normal,cold
+request,A-,3,Hyderabad,2024-01-17,high,stormy
+donation,B-,1,Pune,2024-01-18,normal,sunny
+request,O+,4,Delhi,2024-01-18,critical,rainy
+donation,AB-,1,Ahmedabad,2024-01-19,normal,cloudy
+request,B+,2,Mumbai,2024-01-19,high,sunny

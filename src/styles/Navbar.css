@@ -1,0 +1,136 @@
+/* Navbar Container */
+.navbar {
+  background-color: #a10000 !important;
+  padding: 15px 0;
+  transition: background-color 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffd6d6 !important;
+}
+
+/* Nav Links */
+.navbar-nav a.nav-link {
+  color: #fff !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav a.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
+  background-color: #ffd6d6;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav a.nav-link:hover::after {
+  width: 60%;
+}
+
+.navbar-nav a.nav-link:hover {
+  color: #ffd6d6 !important;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+/* Responsive Nav Collapse */
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: #a10000;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav a.nav-link::after {
+    display: none;
+  }
+}
+
+/* Dropdown Toggle Button */
+.navbar .dropdown-toggle {
+  background-color: #a10000;
+  color: white !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+  background-color: #ffffff;
+  color: #a10000 !important;
+}
+
+/* Dropdown Menu */
+.navbar .dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  padding: 10px 0;
+  background-color: #fff;
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+}
+
+/* Dropdown Items */
+.navbar .dropdown-menu .dropdown-item {
+  padding: 12px 20px;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Divider */
+.navbar .dropdown-menu .dropdown-divider {
+  margin: 6px 0;
+  border-color: #ddd;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

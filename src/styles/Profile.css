@@ -1,0 +1,719 @@
+.profile-container {
+  @import url('./theme.css');
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+  background: linear-gradient(120deg, #fff6f6 60%, #ffeaea 100%);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(231,76,60,0.10), 0 1.5px 4px rgba(0,0,0,0.04);
+  margin-bottom: 30px;
+  transition: box-shadow 0.2s;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e74c3c;
+  box-shadow: 0 4px 16px rgba(231,76,60,0.15);
+  background: #fff;
+}
+
+.profile-photo-edit-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(231,76,60,0.3);
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.profile-photo-edit-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.profile-user-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 32px;
+  color: #e74c3c;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.profile-username {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #e74c3c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+  font-size: 16px;
+}
+
+/* Tabs */
+.profile-tabs {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  padding: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 16px 20px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.tab-btn:hover {
+  background: rgba(231,76,60,0.05);
+  color: #e74c3c;
+}
+
+.tab-btn.active {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(231,76,60,0.3);
+}
+
+/* Tab Content */
+.tab-content {
+  min-height: 400px;
+}
+
+/* Profile Info Section */
+.profile-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.info-card h3 {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #e74c3c;
+}
+
+.info-icon {
+  color: #e74c3c;
+  font-size: 18px;
+  min-width: 18px;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.info-item span {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Donation History */
+.donation-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.donation-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #e74c3c;
+}
+
+.donation-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.donation-details {
+  flex: 1;
+}
+
+.donation-details h4 {
+  color: #333;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.donation-details p {
+  color: #666;
+  margin: 0;
+  font-size: 14px;
+}
+
+.donation-status .status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Certificates Section */
+.certificates-section h3 {
+  color: #e74c3c;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.certificate-header {
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.certificate-icon {
+  font-size: 32px;
+}
+
+.certificate-level {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.certificate-body {
+  padding: 20px;
+}
+
+.certificate-body h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.certificate-body p {
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.certificate-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 14px;
+}
+
+.certificate-actions {
+  padding: 20px;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #eee;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn.primary {
+  background: #e74c3c;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: #c0392b;
+}
+
+.action-btn.secondary {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.action-btn.secondary:hover {
+  background: #e9ecef;
+}
+
+/* Rewards Section */
+.rewards-section h3 {
+  color: #e74c3c;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.reward-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.reward-card:hover {
+  transform: translateY(-2px);
+}
+
+.reward-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.reward-content h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.reward-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 12px;
+}
+
+.reward-content p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Milestones */
+.milestones-section {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.milestones-section h4 {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.milestone-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.milestone-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+}
+
+.milestone-icon {
+  color: #e74c3c;
+  font-size: 20px;
+}
+
+.milestone-info h5 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.milestone-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  transition: width 0.3s;
+}
+
+.progress-text {
+  color: #666;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Coupons Section */
+.coupons-section h3 {
+  color: #e74c3c;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+.coupon-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.coupon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: #e74c3c;
+}
+
+.coupon-header {
+  padding: 20px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-icon {
+  font-size: 28px;
+}
+
+.company-info h4 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.category {
+  color: #666;
+  font-size: 14px;
+}
+
+.discount-badge {
+  background: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.coupon-body {
+  padding: 20px;
+}
+
+.coupon-body h5 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.coupon-body p {
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.coupon-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+.coupon-code span {
+  color: #333;
+  font-weight: 600;
+}
+
+.copy-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #c0392b;
+}
+
+.coupon-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.validity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.redeem-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.redeem-btn:hover {
+  background: #218838;
+}
+
+.profile-loading {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    margin: 20px auto;
+    padding: 16px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .profile-stats {
+    justify-content: center;
+  }
+  
+  .profile-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .tab-btn {
+    min-width: unset;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificates-grid,
+  .rewards-grid,
+  .coupons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .milestone-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .milestone-info {
+    min-width: unset;
+  }
+  
+  .coupon-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .coupon-footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+  

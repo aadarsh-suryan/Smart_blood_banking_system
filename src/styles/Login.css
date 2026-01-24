@@ -1,0 +1,135 @@
+
+@import url('./theme.css');
+/* Login required message styling */
+.login-required-message {
+    width: 100%;
+    background: linear-gradient(90deg, var(--light-color) 0%, #ffd6d6 100%);
+    color: var(--primary-dark);
+    border: 1.5px solid var(--accent-color);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-bottom: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: var(--box-shadow);
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.7s;
+}
+.login-required-icon {
+    font-size: 1.5rem;
+    margin-right: 6px;
+    color: var(--accent-color);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* REMOVE the global body, html styles — they break the app */
+
+.login-container {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+    margin: 40px auto; /* centers it */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.quote-section {
+    width: 60%;
+    background: linear-gradient(135deg, #ff6b6b, #ff3d3d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.quote-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.quote-section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.login-form {
+    width: 40%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.login-form input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button {
+    width: 80%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+    background: #e64949;
+    transform: scale(1.05);
+}
+
+.login-form button:active {
+    background: #d43535;
+    transform: scale(0.98);
+}
+
+
+.signup-option {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.signup-option a {
+    color: #9e1212;
+    text-decoration: none;
+}
+.signup-option a:hover {
+    text-decoration: underline;
+}

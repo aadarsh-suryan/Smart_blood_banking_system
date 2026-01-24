@@ -1,0 +1,45 @@
+.about-container {
+  @import url('./theme.css');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+  background: linear-gradient(to right, var(--light-color), #ebedee);
+    padding: 40px;
+  }
+  
+  .about-card {
+    max-width: 1114px;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: var(--box-shadow-lg);
+    font-family: var(--font-family);
+    color: var(--dark-color);
+  }
+  
+  .about-card h1 {
+    font-size: 36px;
+  color: var(--accent-color);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .about-card .highlight {
+  color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  .about-card .quote {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    margin-top: 30px;
+  }
+  

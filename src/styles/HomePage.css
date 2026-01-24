@@ -1,0 +1,269 @@
+/* CTA Horizontal Card Styling */
+.cta-horizontal-card {
+    @import url('./theme.css');
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 180px;
+}
+
+
+.cta-horizontal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+
+.cta-horizontal-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+
+.cta-horizontal-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Responsive: No change needed, already column and centered */
+/* Keep Background Image */
+.home-container {
+    background-color: #ffeaf4; /* even lighter pink */
+    min-height: 100vh;
+    text-align: center;
+    color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slider Styling */
+.slider-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    margin-top: 0;
+    position: relative;
+}
+
+
+.slider-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Slider Arrow Styling */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(214, 40, 40, 0.95);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(214, 40, 40, 0.95);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Cards Section */
+.sections-container {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* Custom Card Styling */
+.custom-card {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px; /* Added margin for spacing */
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(183, 28, 28, 0.3);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d62828; /* strong red */
+}
+
+.card-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-btn:hover {
+    background-color: #a10000;
+}
+
+/* Blood Donation Information Section */
+.donation-info-section {
+    width: 100%;
+    padding: 60px 10%;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #fff5f0 100%);
+    color: #7a0000;
+}
+
+.donation-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d62828;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donation-subheading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e64a19; /* orange */
+    margin-top: 20px;
+}
+
+.donation-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.donation-list {
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .donation-info-section {
+        padding: 30px;
+    }
+
+    .donation-heading {
+        font-size: 2rem;
+    }
+
+    .donation-subheading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Blood Donation Statistics Section */
+.blood-donation-stats-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.stats-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d62828;
+    margin-bottom: 20px;
+}
+
+.stats-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Cards in Statistics Section */
+.stats-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px; /* Added margin for spacing */
+}
+
+.stats-card:hover {
+    transform: scale(1.05);
+}
+
+.stats-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e64a19;
+}
+
+.stats-card-text {
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Ensure Equal Spacing Between Cards */
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Bullet Points for Content in Cards */
+.stats-list {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    color: black;
+}

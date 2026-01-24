@@ -1,0 +1,151 @@
+
+@import url('./theme.css');
+/* Login required message styling (same as Login.css for consistency) */
+.login-required-message {
+    width: 100%;
+    background: linear-gradient(90deg, var(--light-color) 0%, #ffd6d6 100%);
+    color: var(--primary-dark);
+    border: 1.5px solid var(--accent-color);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-bottom: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: var(--box-shadow);
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.7s;
+}
+.login-required-icon {
+    font-size: 1.5rem;
+    margin-right: 6px;
+    color: var(--accent-color);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.signup-container {
+    display: flex;
+    width: min(1100px, 95vw);
+    max-width: 1200px;
+    height: auto;
+    max-height: none;
+    border-radius: var(--border-radius-lg);
+    overflow: visible;
+    box-shadow: var(--box-shadow-lg);
+    margin: 24px auto; /* Center the box */
+}
+
+.quote-section {
+    width: 60%;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-dark));
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: 360px;
+}
+
+.quote-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.quote-section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.signup-form {
+    width: 40%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.signup-form button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+.signup-form button:active {
+    background: #a93226;
+    transform: scale(0.98);
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+    .signup-container { width: min(1000px, 96vw); }
+}
+
+@media (max-width: 820px) {
+    .signup-container { flex-direction: column; }
+    .quote-section, .signup-form { width: 100%; }
+    .signup-form { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+    .quote-section h1 { font-size: 2rem; }
+    .quote-section p { font-size: 1rem; }
+}
+
+/* Ensure address textarea is visible and comfortable */
+.signup-form textarea { min-height: 96px; resize: vertical; }
+

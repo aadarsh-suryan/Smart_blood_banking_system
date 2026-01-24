@@ -1,0 +1,153 @@
+{
+  "regionalDemand": {
+    "labels": [
+      "Mumbai",
+      "Delhi",
+      "Kolkata",
+      "Bangalore",
+      "Hyderabad",
+      "Chennai",
+      "Pune",
+      "Ahmedabad"
+    ],
+    "datasets": [
+      {
+        "label": "Blood Demand (Units)",
+        "data": [
+          2683637,
+          2147272,
+          1613754,
+          1434323,
+          1258076,
+          1079133,
+          900647,
+          809250
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#4BC0C0",
+          "#9966FF",
+          "#FF9F40",
+          "#FF6384",
+          "#C9CBCF"
+        ],
+        "borderColor": "#d62828",
+        "borderWidth": 2
+      }
+    ]
+  },
+  "seasonalTrends": {
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "datasets": [
+      {
+        "label": "Average Blood Demand",
+        "data": [
+          96.82623487903226,
+          96.38841261061947,
+          107.22076612903226,
+          107.12252604166666,
+          149.39289314516128,
+          149.93606770833333,
+          128.75819052419354,
+          127.75919858870968,
+          128.50455729166666,
+          170.86580141129033,
+          170.17513020833334,
+          96.31161794354838
+        ],
+        "borderColor": "#d62828",
+        "backgroundColor": "rgba(214, 40, 40, 0.1)",
+        "tension": 0.4,
+        "fill": true
+      }
+    ]
+  },
+  "bloodTypeDistribution": {
+    "labels": [
+      "A+",
+      "A-",
+      "AB+",
+      "AB-",
+      "B+",
+      "B-",
+      "O+",
+      "O-"
+    ],
+    "datasets": [
+      {
+        "data": [
+          25.0,
+          3.0,
+          8.0,
+          0.6,
+          20.0,
+          1.5,
+          35.0,
+          7.0
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#4BC0C0",
+          "#9966FF",
+          "#FF9F40",
+          "#FF6384",
+          "#C9CBCF"
+        ]
+      }
+    ]
+  },
+  "predictions": {
+    "nextMonth": {
+      "region": "Delhi",
+      "predictedDemand": 36,
+      "confidence": 86,
+      "trend": "increasing"
+    },
+    "criticalPeriods": [
+      {
+        "period": "Summer (May-June)",
+        "demand": "High",
+        "reason": "Heat-related emergencies, accidents, dehydration cases"
+      },
+      {
+        "period": "Festival Season (Oct-Nov)",
+        "demand": "Very High",
+        "reason": "Increased accidents during celebrations, road mishaps"
+      },
+      {
+        "period": "Winter (Dec-Jan)",
+        "demand": "Medium",
+        "reason": "Stable period with predictable demand patterns"
+      },
+      {
+        "period": "Monsoon (Jul-Sep)",
+        "demand": "High",
+        "reason": "Waterborne diseases, flooding accidents"
+      }
+    ]
+  },
+  "realTimeInsights": {
+    "lastUpdated": "2025-09-09T00:21:41.931545",
+    "totalRealTimeRecords": 10,
+    "recentDonations": 0,
+    "recentRequests": 0,
+    "criticalRequests": 0
+  }
+}
