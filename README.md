@@ -183,7 +183,7 @@ A comprehensive full-stack web platform that revolutionizes blood donation and d
 git clone https://github.com/aadarsh-suryan/Smart_blood_banking_system.git
 
 # Navigate to the project directory
-cd SMART-BLOOD-BANKING
+cd Smart_blood_banking_system
 
 # Install frontend dependencies
 npm install
