@@ -180,7 +180,7 @@ A comprehensive full-stack web platform that revolutionizes blood donation and d
 
 ```bash
 # Clone the repository
-git clone https://github.com/Aman-Kr09/SMART-BLOOD-BANKING.git
+git clone https://github.com/aadarsh-suryan/Smart_blood_banking_system.git
 
 # Navigate to the project directory
 cd SMART-BLOOD-BANKING
